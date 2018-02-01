@@ -1,6 +1,8 @@
 package App
 
-object removeStringSpaces extends App{
+import scala.io.StdIn
+
+object RemoveStringSpaces extends App{
 
   def stripSpaces(string: String): Unit = {
     val stringList = string.split(" ").toList
@@ -8,5 +10,6 @@ object removeStringSpaces extends App{
     stringList.foreach(print)
   }
 
-  stripSpaces("Hello there")
+  val input = StdIn.readLine("")
+  stripSpaces(input)
 }
