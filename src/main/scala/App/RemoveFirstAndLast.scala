@@ -7,9 +7,14 @@ import scala.io.StdIn
   */
 object RemoveFirstAndLast extends App {
 
-  def removeHeadAndTail(input: String): Option[String] = {
-    println(input.tail.init)
-    Some(input)
+  def removeHeadAndTail(input: String): String = {
+    if (!input.equals("")) {
+      println(input.tail.init)
+      input
+    } else {
+      println("Nothing entered")
+      "No string entered"
+    }
   }
 
   val input = StdIn.readLine("")
